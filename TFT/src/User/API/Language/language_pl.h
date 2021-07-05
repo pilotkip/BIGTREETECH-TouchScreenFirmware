@@ -194,5 +194,7 @@
 	#define PL_LASER_2					"Laser 2%"
 	#define PL_LASER_100				"Laser 100%"
 	#define PL_LASER_OFF				"Laser Off"
+    #define PL_PROBE_Z                  "Probe Z"
+    #define PL_ACTIONS                  "Actions"
 
 #endif

@@ -194,5 +194,7 @@
 	#define JP_LASER_2					"Laser 2%"
 	#define JP_LASER_100				"Laser 100%"
 	#define JP_LASER_OFF				"Laser Off"
+    #define JP_PROBE_Z                  "調査 Z"
+    #define JP_ACTIONS                  "Actions"
 
 #endif

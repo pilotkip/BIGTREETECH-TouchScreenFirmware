@@ -194,5 +194,7 @@
 	#define CN_LASER_2					"Laser 2%"
 	#define CN_LASER_100				"Laser 100%"
 	#define CN_LASER_OFF				"Laser Off"
-    
+    #define CN_PROBE_Z   				"探测 Z"
+    #define CN_ACTIONS                  "Actions"
+
 #endif

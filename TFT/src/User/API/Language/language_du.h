@@ -194,5 +194,7 @@
 	#define DU_LASER_2					"Laser 2%"
 	#define DU_LASER_100				"Laser 100%"
 	#define DU_LASER_OFF				"Laser Off"
+    #define DU_PROBE_Z                  "Probe Z"
+    #define DU_ACTIONS                  "Actions"
 
 #endif

@@ -194,5 +194,7 @@
 	#define AM_LASER_2					"Laser 2%"
 	#define AM_LASER_100				"Laser 100%"
 	#define AM_LASER_OFF				"Laser Off"
+    #define AM_PROBE_Z                  "Probe Z"
+    #define AM_ACTIONS                  "Actions"
     
 #endif

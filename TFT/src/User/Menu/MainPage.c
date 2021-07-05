@@ -10,11 +10,14 @@ MENUITEMS mainPageItems = {
       {ICON_MOVE,                 LABEL_MOVE},
 	    {ICON_GCODE,                LABEL_GCODE},
       {ICON_STOP,                 LABEL_EMERGENCYSTOP},
+      {ICON_ACTIONS,          LABEL_ACTIONS},
+      /*
       #ifdef CNC_LASER
 	  	{ICON_LASER,                  LABEL_LASER},
 		  #else
 		  {ICON_FAN,                  LABEL_FAN},
 	    #endif
+      */
       {ICON_SPINDLE,              LABEL_SPINDLE},
       {ICON_SETTINGS,             LABEL_SETTINGS},
       {ICON_SPINDLE,              LABEL_CUT}}
@@ -73,11 +76,14 @@ void menuMain(void)
 	      case KEY_ICON_3: storeCmd("M112\n"); break;     // Emergency Stop : Used for emergency stopping, a reset is required to return to operational mode.
                                                         // it may need to wait for a space to open up in the command queue.
                                                         // Enable EMERGENCY_PARSER in Marlin Firmware for an instantaneous M112 command.
+        case KEY_ICON_4: infoMenu.menu[++infoMenu.cur] = menuCustom;         break;
+		    /*
         #ifdef CNC_LASER
         case KEY_ICON_4: infoMenu.menu[++infoMenu.cur] = menuLaser;         break;
 		    #else
 		    case KEY_ICON_4: infoMenu.menu[++infoMenu.cur] = menuFan;         break;
 		    #endif
+        */
         case KEY_ICON_5: infoMenu.menu[++infoMenu.cur] = menuSpindle;          break;
         case KEY_ICON_6: infoMenu.menu[++infoMenu.cur] = menuSettings;        break;
         case KEY_ICON_7: infoMenu.menu[++infoMenu.cur] = menuPrint;     break;

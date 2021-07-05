@@ -9,7 +9,7 @@ LABEL_HOME,
 #ifdef CNC_MENU //if CNC menu is selected
   {{ICON_HOME,                 LABEL_XY},
     {ICON_Z_HOME,               LABEL_Z},
-    {ICON_BACKGROUND,           LABEL_BACKGROUND},
+    {ICON_Z_PROBE,              LABEL_PROBE_Z},
     {ICON_BACKGROUND,           LABEL_BACKGROUND},
     {ICON_ZERO_X,               LABEL_ZERO_X},
     {ICON_ZERO_Y,               LABEL_ZERO_Y},
@@ -40,6 +40,7 @@ void menuHome(void)
     	#ifdef CNC_MENU //if CNC menu is selected
         case KEY_ICON_0: storeCmd("G28 XY\n");   break;
         case KEY_ICON_1: storeCmd("G28 Z\n"); break;
+        case KEY_ICON_2: storeCmd("G92 Z0\nG38.2 Z-20 F50\nG92 Z25.4\nG0 Z30 F100\n"); break;
         case KEY_ICON_4: storeCmd("G92 X0\n"); break;
         case KEY_ICON_5: storeCmd("G92 Y0\n"); break;
         case KEY_ICON_6: storeCmd("G92 Z0\n"); break;

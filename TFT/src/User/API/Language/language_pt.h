@@ -194,5 +194,7 @@
 	#define PT_LASER_2					"Laser 2%"
 	#define PT_LASER_100				"Laser 100%"
 	#define PT_LASER_OFF				"Laser Off"
+    #define PT_PROBE_Z                  "Probe Z"
+    #define PT_ACTIONS                  "Actions"
 
 #endif
