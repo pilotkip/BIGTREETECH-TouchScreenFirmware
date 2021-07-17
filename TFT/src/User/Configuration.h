@@ -294,12 +294,12 @@
  *
  * CUSTOM_X_LABEL is the name of the custom button, CUSTOM_X_GCODE is the G-code to be sent by the custom button, this should always end with a New-Line character '\n'
  */
-#define CUSTOM_0_LABEL "Go Home"
-#define CUSTOM_0_GCODE "G0 Z100 F1000\nG0 X0 Y0 F15000\n"
-#define CUSTOM_1_LABEL "Tool Change"
-#define CUSTOM_1_GCODE "G0 Z100 F1000\nG0 X1260 Y0 F15000\n"
-#define CUSTOM_2_LABEL "Release SD Card"
-#define CUSTOM_2_GCODE "M22\n"
+#define CUSTOM_0_LABEL "GoTo Home"
+#define CUSTOM_0_GCODE "G53 G0 Z100 F1000\nG53 G0 X0 Y0 F15000\n"
+#define CUSTOM_1_LABEL "GoTo Tool Change"
+#define CUSTOM_1_GCODE "G53 G0 Z100 F1000\nG53 G0 X1260 Y0 F15000\n"
+#define CUSTOM_2_LABEL "GoTo X0 Y0"
+#define CUSTOM_2_GCODE "G0 X0 Y0 F15000\n"
 #define CUSTOM_3_LABEL "Enable Leveling State"
 #define CUSTOM_3_GCODE "M420 S1\n"
 #define CUSTOM_4_LABEL "Save to EEPROM"
