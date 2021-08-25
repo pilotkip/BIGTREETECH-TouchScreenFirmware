@@ -196,5 +196,6 @@
 	#define JP_LASER_OFF				"Laser Off"
     #define JP_PROBE_Z                  "調査 Z"
     #define JP_ACTIONS                  "Actions"
+    #define JP_CONFIRM_RUN            "Confirm Run"
 
 #endif

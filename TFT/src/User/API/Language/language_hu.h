@@ -196,5 +196,6 @@
 	#define HU_LASER_OFF				"Laser Off"
     #define HU_PROBE_Z                  "Probe Z"
     #define HU_ACTIONS                  "Actions"
+    #define HU_CONFIRM_RUN            "Confirm Run"
     
 #endif

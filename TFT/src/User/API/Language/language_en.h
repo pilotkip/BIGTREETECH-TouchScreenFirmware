@@ -196,5 +196,6 @@
 	#define EN_LASER_OFF				"Laser Off"
     #define EN_PROBE_Z                  "Probe Z"
     #define EN_ACTIONS                  "Actions"
+    #define EN_CONFIRM_RUN            "\u0887 Confirm Run" //Question Sign
 
 #endif

@@ -196,5 +196,6 @@
 	#define SK_LASER_OFF				"Laser Off"
     #define SK_PROBE_Z                  "Probe Z"
     #define SK_ACTIONS                  "Actions"
+    #define SK_CONFIRM_RUN            "Confirm Run"
     
 #endif

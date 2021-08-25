@@ -196,5 +196,6 @@
 	#define IT_LASER_OFF				"Laser Off"
     #define IT_PROBE_Z                  "Probe Z"
     #define IT_ACTIONS                  "Actions"
+    #define IT_CONFIRM_RUN            "Confirm Run"
 
 #endif

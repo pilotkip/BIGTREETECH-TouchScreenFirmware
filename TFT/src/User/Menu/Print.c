@@ -322,7 +322,9 @@ void menuPrintFromSource(void)
               }
               //-load bmp preview in flash if file exists - end
             }
-            infoMenu.menu[++infoMenu.cur] = menuBeforePrinting;
+            // infoMenu.menu[++infoMenu.cur] = menuBeforePrinting;
+            // Kip
+            infoMenu.menu[++infoMenu.cur] = menuConfirmPrint;
           }
         }
 

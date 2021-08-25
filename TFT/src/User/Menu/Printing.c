@@ -172,9 +172,37 @@ u8 *getCurGcodeName(char *path)
   return (u8* )(&path[i+1]);
 }
 
+
+//Kip
+void menuConfirmPrint(void)
+{
+  u16 key_num = IDLE_TOUCH;
+  GUI_Clear(BACKGROUND_COLOR);
+  popupDrawPage(bottomDoubleBtn, textSelect(LABEL_CONFIRM_RUN), (u8* )infoFile.title, textSelect(LABEL_CONFIRM), textSelect(LABEL_CANNEL));
+
+  while(infoMenu.menu[infoMenu.cur]==menuConfirmPrint)
+  {
+    key_num = KEY_GetValue(2, doubleBtnRect);
+    switch(key_num)
+    {
+      case KEY_POPUP_CONFIRM:
+        infoMenu.menu[infoMenu.cur] = menuBeforePrinting;
+        break;
+
+      case KEY_POPUP_CANCEL:
+        ExitDir();
+        infoMenu.cur--;
+        break;
+    }
+
+    loopProcess();
+  }
+}
+
 void menuBeforePrinting(void)
 {
   long size = 0;
+
   switch (infoFile.source)
   {
     case BOARD_SD: // GCode from file on ONBOARD SD

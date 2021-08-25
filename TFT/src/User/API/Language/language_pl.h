@@ -196,5 +196,6 @@
 	#define PL_LASER_OFF				"Laser Off"
     #define PL_PROBE_Z                  "Probe Z"
     #define PL_ACTIONS                  "Actions"
+    #define PL_CONFIRM_RUN            "Confirm Run"
 
 #endif

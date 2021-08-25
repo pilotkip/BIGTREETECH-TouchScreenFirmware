@@ -196,5 +196,6 @@
 	#define RU_LASER_OFF				"Laser Off"
     #define RU_PROBE_Z  				"зонд Z"
     #define RU_ACTIONS                  "Actions"
+    #define RU_CONFIRM_RUN            "Confirm Run"
 
 #endif

@@ -196,5 +196,6 @@
 	#define DU_LASER_OFF				"Laser Off"
     #define DU_PROBE_Z                  "Probe Z"
     #define DU_ACTIONS                  "Actions"
+    #define DU_CONFIRM_RUN            "Confirm Run"
 
 #endif

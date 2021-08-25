@@ -196,5 +196,6 @@
 	#define ES_LASER_OFF				"Laser Off"
     #define ES_PROBE_Z                  "Probe Z"
     #define ES_ACTIONS                  "Actions"
+    #define ES_CONFIRM_RUN            "Confirm Run"
 
 #endif

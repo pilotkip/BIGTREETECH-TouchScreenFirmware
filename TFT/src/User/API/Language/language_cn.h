@@ -196,5 +196,6 @@
 	#define CN_LASER_OFF				"Laser Off"
     #define CN_PROBE_Z   				"探测 Z"
     #define CN_ACTIONS                  "Actions"
+    #define CN_CONFIRM_RUN            "Confirm Run"
 
 #endif

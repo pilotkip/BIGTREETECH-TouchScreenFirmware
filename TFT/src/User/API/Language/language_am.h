@@ -196,5 +196,6 @@
 	#define AM_LASER_OFF				"Laser Off"
     #define AM_PROBE_Z                  "Probe Z"
     #define AM_ACTIONS                  "Actions"
+    #define AM_CONFIRM_RUN            "Confirm Run"
     
 #endif

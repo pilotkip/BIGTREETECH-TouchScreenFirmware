@@ -40,6 +40,7 @@ void printSetUpdateWaiting(bool isWaiting);
 
 void getGcodeFromFile(void);
 
+void menuConfirmPrint(void); //Kip
 void menuBeforePrinting(void);
 void menuPrinting(void);
 void menuStopPrinting(void);

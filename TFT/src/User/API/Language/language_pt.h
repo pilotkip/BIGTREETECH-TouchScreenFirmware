@@ -196,5 +196,6 @@
 	#define PT_LASER_OFF				"Laser Off"
     #define PT_PROBE_Z                  "Probe Z"
     #define PT_ACTIONS                  "Actions"
+    #define PT_CONFIRM_RUN            "Confirm Run"
 
 #endif

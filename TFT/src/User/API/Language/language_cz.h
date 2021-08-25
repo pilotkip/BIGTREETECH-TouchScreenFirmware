@@ -196,5 +196,6 @@
 	#define CZ_LASER_OFF				"Laser Off"
     #define CZ_PROBE_Z                  "Probe Z"
     #define CZ_ACTIONS                  "Actions"
+    #define CZ_CONFIRM_RUN            "Confirm Run"
 
 #endif
