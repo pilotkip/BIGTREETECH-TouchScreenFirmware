@@ -32,6 +32,10 @@ void menuHome(void)
 {
   KEY_VALUES key_num = KEY_IDLE;
   menuDrawPage(&homeItems);
+  update_gantry();
+  float v;
+  float ov;
+  char c;
   while(infoMenu.menu[infoMenu.cur] == menuHome)
   {
     key_num = menuKeyGetValue();
@@ -40,10 +44,18 @@ void menuHome(void)
     	#ifdef CNC_MENU //if CNC menu is selected
         case KEY_ICON_0: storeCmd("G28 XY\n");   break;
         case KEY_ICON_1: storeCmd("G28 Z\n"); break;
-        case KEY_ICON_2: storeCmd("G92 Z0\nG38.2 Z-20 F50\nG92 Z25.4\nG0 Z30 F100\n"); break;
-        case KEY_ICON_4: storeCmd("G92 X0\n"); break;
-        case KEY_ICON_5: storeCmd("G92 Y0\n"); break;
-        case KEY_ICON_6: storeCmd("G92 Z0\n"); break;
+        case KEY_ICON_2: storeCmd("G54\nG92 Z0\nG38.2 Z-20 F50\nG92 Z25.4\nG0 Z30 F1000\n"); break;
+        case KEY_ICON_4: 
+        case KEY_ICON_5: 
+        case KEY_ICON_6: 
+          c = (int)'X' + (key_num - KEY_ICON_4); //X, Y or Z?
+          ov = getAxisLocation(key_num - KEY_ICON_4) + 0.000001; //Out of band data. If num_pad() truncates this, user pressed OK, otherwise user pressed CANCEL
+          v = num_pad(ov,true);
+          if(v != ov) {
+            storeCmd("G54\nG92 %c%f\n",c,v); 
+          }
+          menuDrawPage(&homeItems);
+          break;
       #else
         case KEY_ICON_0: storeCmd("G28\n");   break;
         case KEY_ICON_1: storeCmd("G28 X\n"); break;
@@ -54,6 +66,7 @@ void menuHome(void)
       default:break;
     }
     loopProcess();
+    update_gantry();
   }
 }
 

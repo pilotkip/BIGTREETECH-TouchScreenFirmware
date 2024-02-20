@@ -294,20 +294,32 @@
  *
  * CUSTOM_X_LABEL is the name of the custom button, CUSTOM_X_GCODE is the G-code to be sent by the custom button, this should always end with a New-Line character '\n'
  */
-#define CUSTOM_0_LABEL "GoTo Home"
-#define CUSTOM_0_GCODE "G53 G0 Z100 F1000\nG53 G0 X0 Y0 F15000\n"
-#define CUSTOM_1_LABEL "GoTo Tool Change"
-#define CUSTOM_1_GCODE "G53 G0 Z100 F1000\nG53 G0 X1260 Y0 F15000\n"
-#define CUSTOM_2_LABEL "GoTo X0 Y0"
-#define CUSTOM_2_GCODE "G0 X0 Y0 F15000\n"
-#define CUSTOM_3_LABEL "Enable Leveling State"
-#define CUSTOM_3_GCODE "M420 S1\n"
-#define CUSTOM_4_LABEL "Save to EEPROM"
-#define CUSTOM_4_GCODE "M500\n"
-#define CUSTOM_5_LABEL "Restore from EEPROM"
-#define CUSTOM_5_GCODE "M501\n"
-#define CUSTOM_6_LABEL "EEPROM Defaults"
-#define CUSTOM_6_GCODE "M502\n"
+#define CUSTOM_0_LABEL "GoTo Machine X0"
+#define CUSTOM_0_GCODE "G53\nG0 Z100 F1000\nG53 G0 X0 F10000\nG54\n"
+#define CUSTOM_1_LABEL "GoTo Machine X400"
+#define CUSTOM_1_GCODE "G53\nG0 Z100 F1000\nG53 G0 X400 F10000\nG54\n"
+#define CUSTOM_2_LABEL "GoTo Machine X800"
+#define CUSTOM_2_GCODE "G53\nG0 Z100 F1000\nG53 G0 X800 F10000\nG54\n"
+#define CUSTOM_3_LABEL "GoTo Machine X1230"
+#define CUSTOM_3_GCODE "G53\nG0 Z100 F1000\nG53 G0 X1230 F10000\nG54\n"
+#define CUSTOM_4_LABEL "GoTo Machine Y0"
+#define CUSTOM_4_GCODE "G53\nG0 Z100 F1000\nG53 G0 Y0 F10000\nG54\n"
+#define CUSTOM_5_LABEL "GoTo Machine Y400"
+#define CUSTOM_5_GCODE "G53\nG0 Z100 F1000\nG53 G0 Y400 F10000\nG54\n"
+#define CUSTOM_6_LABEL "GoTo Machine Y800"
+#define CUSTOM_6_GCODE "G53\nG0 Z100 F1000\nG53 G0 Y800 F10000\nG54\n"
+#define CUSTOM_7_LABEL "GoTo Machine Y1200"
+#define CUSTOM_7_GCODE "G53\nG0 Z100 F1000\nG53 G0 Y1200 F10000\nG54\n"
+#define CUSTOM_8_LABEL "GoTo Work X0 Y0"
+#define CUSTOM_8_GCODE "G54\nG0 X0 Y0 F5000\n"
+//#define CUSTOM_8_LABEL "Enable Leveling State"
+//#define CUSTOM_8_GCODE "M420 S1\n"
+//#define CUSTOM_9_LABEL "Save to EEPROM"
+//#define CUSTOM_9_GCODE "M500\n"
+//#define CUSTOM_10_LABEL "Restore from EEPROM"
+//#define CUSTOM_10_GCODE "M501\n"
+//#define CUSTOM_11_LABEL "EEPROM Defaults"
+//#define CUSTOM_11_GCODE "M502\n"
 //#define CUSTOM_7_LABEL "Custom7"
 //#define CUSTOM_7_GCODE "M105\n"
 //#define CUSTOM_8_LABEL "Custom8"
@@ -342,6 +354,7 @@
 
 // Cancel G-code - run this G-code after canceling print
 //#define CANCEL_PRINT_GCODE "G28 XY R10\n" // Raise Z 10mm before homing X & Y
-#define CANCEL_PRINT_GCODE ""
+//#define CANCEL_PRINT_GCODE ""
+#define CANCEL_PRINT_GCODE "M410\nG53\nG0 Z100 F1000\nG54\n" //Kip - Quickstop, Move bit out of work.
 
 #endif
